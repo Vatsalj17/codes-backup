@@ -1,0 +1,25 @@
+/* hi */
+body {
+    background: purple;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+        /* width: 100%; */
+        color: green;
+    }
+
+    p {
+        color: blue;
+    }
+
+    button {
+        width: 130px;
+        box-shadow: black;
+        background-color: magenta;
+        color: white;
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "id": "900be77388a0ef2c",
+    "object": "chat.completion",
+    "choices": [
+        {
+            "index": 0,
+            "finish_reason": "length",
+            "logprobs": null,
+            "message": {
+                "role": "assistant",
+                "content": " San Francisco, located on the west coast of the United States, is a vibrant and culturally rich city known for its iconic landmarks, diverse neighborhoods, and innovative tech scene.\n\n1. **Golden Gate Bridge**: One of the most recognized symbols of San Francisco, this stunning red suspension bridge spans the Golden Gate strait connecting the city to Marin County. It offers breathtaking views and is a must-see for any visitor.\n\n2. **Alcatraz Island**: Known for its infamous prison, Alcatraz Island is a historical landmark that provides a fascinating insight into the lives of the prisoners who once lived there. Be sure to book your tickets in advance as it's a popular tourist destination.\n\n3. **Fisherman's Wharf**: This bustling waterfront district is filled with shops, restaurants, and attractions like the famous sea lion colony at Pier 39, the Maritime National Historical Park, and the Aquarium of the Bay.\n\n4. **Chinatown**: The oldest Chinatown in North America, San Francisco's Chinatown is a lively area full of authentic Chinese stores, restaurants, and cultural landmarks.\n\n5. **Cable Cars**: An iconic mode of transportation in San Francisco, the city's cable car system is a fun and scenic way to get around, especially for first-time visitors.\n\n6. **Museums**: The city is home to numerous world-class museums, including the California Academy of Sciences, the de Young Museum, and the Exploratorium, offering educational and interactive experiences for visitors of all ages.\n\n7. **Parks**: San Francisco boasts numerous beautiful parks, such as Golden Gate Park, Presidio Park, and Yosemite National Park (which is a bit of a drive but worth it for nature lovers).\n\n8. **Food Scene**: San Francisco's culinary scene is diverse and innovative, with a strong focus on farm-to-table dining and seafood. Don't miss out on trying sourdough bread, clam chowder in a bread bowl, and some of the city's artisanal coffee.\n\n9. **Tech Hub**: Silicon Valley, home to many leading tech companies like Google, Apple, and Facebook, is just a short drive south of San Francisco, making",
+                "tool_calls": []
+            }
+        }
+    ],
+    "created": 1736671880,
+    "model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 215,
+        "total_tokens": 229
+    }
+}

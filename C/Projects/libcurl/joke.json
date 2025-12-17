@@ -1,0 +1,22 @@
+{
+    "error": false,
+    "category": "Pun",
+    "type": "twopart",
+    "setup": "Which part of the hospital has the least privacy?",
+    "delivery": "The ICU.",
+    "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+    },
+    "safe": true,
+    "id": 285,
+    "lang": "en",
+
+    "genre": "Programming",
+    "pun": "Dark",
+    "spooky": "Christmams"
+}

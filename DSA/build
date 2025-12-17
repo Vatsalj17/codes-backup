@@ -1,0 +1,79 @@
+#!/bin/bash
+
+CLR_RESET='\033[0m'
+CLR_RED='\033[0;31m'
+CLR_GREEN='\033[0;32m'
+CLR_YELLOW='\033[0;33m'
+CLR_CYAN='\033[0;36m'
+CLR_BOLD='\033[1m'
+
+if [ -z "$1" ]; then
+	echo -e "${CLR_BOLD}${CLR_RED}ERROR:${CLR_RESET} File must be provided as argument"
+	exit 1
+fi
+
+filename="$1"
+command="$1"
+utildir="utils"
+utilname="mystd"
+target="solution.out"
+to_run=false
+
+case "$command" in
+clean)
+	echo -e "${CLR_YELLOW}Removing ${target}${CLR_RESET}"
+	rm -f "$target"
+	exit 0
+	;;
+run)
+	if [ -z "$2" ]; then
+		echo -e "${CLR_BOLD}${CLR_RED}ERROR:${CLR_RESET} 'run' command requires a source file."
+		exit 1
+	fi
+	filename=$2
+	to_run=true
+	;;
+esac
+
+extension="${filename##*.}"
+
+case "$extension" in
+"cpp" | "cxx" | "cc")
+	filetype="cpp"
+	compiler="g++"
+	echo -e "${CLR_CYAN}C++ Source File Recognized${CLR_RESET}"
+	;;
+"c")
+	filetype="c"
+	compiler="gcc"
+	echo -e "${CLR_CYAN}C Source File Recognized${CLR_RESET}"
+	;;
+*)
+    echo -en "${CLR_BOLD}${CLR_RED}ERROR: ${CLR_RESET}"
+	if [ "$extension" == "$filename" ]; then
+		echo "File has no extension"
+	else
+		echo "Invalid File Type (extension: .$extension)"
+        echo "       Only C and C++ files are supported"
+	fi
+	exit 1
+	;;
+esac
+
+util=""
+if grep "mystd" ${filename} 1>/dev/null; then
+    echo -e "${CLR_YELLOW}Using utils...${CLR_RESET}"
+	util="${utildir}/${utilname}.${filetype}"
+fi
+
+echo -e "${CLR_YELLOW}Compiling...${CLR_RESET}"
+
+if ${compiler} -o ${target} ${filename} ${util} -g; then
+	echo -e "${CLR_GREEN}Compiled: ${target}${CLR_RESET}"
+	if $to_run; then
+		echo -e "${CLR_YELLOW}Running the program...${CLR_RESET}"
+		./${target}
+	fi
+else
+	echo -e "${CLR_BOLD}${CLR_RED}Compilation failed!!!${CLR_RESET}"
+fi

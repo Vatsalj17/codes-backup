@@ -1,0 +1,8 @@
+digraph {
+    Mike -> Jane;
+    Jane -> Steve;
+    Susan -> Carry;
+    Josey -> John;
+    John -> Mike;
+    John -> Jane;
+}

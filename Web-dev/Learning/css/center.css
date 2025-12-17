@@ -1,0 +1,22 @@
+body {
+	display: flex;
+	justify-content: center;
+	background-color: darkviolet;
+}
+
+#outer {
+	height: 300px;
+	width: 300px;
+	background-color: aquamarine;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 200px;
+}
+
+#inner {
+	height: 100px;
+	width: 100px;
+	background-color: indigo;
+	color: indigo;
+}

@@ -1,0 +1,97 @@
+{
+    "data": [
+        {
+            "id": 121025,
+            "wikiDataId": "Q49147",
+            "type": "CITY",
+            "city": "New Bedford",
+            "name": "New Bedford",
+            "country": "United States of America",
+            "countryCode": "US",
+            "region": "Massachusetts",
+            "regionCode": "MA",
+            "regionWdId": "Q771",
+            "latitude": 41.636111111,
+            "longitude": -70.934722222,
+            "population": 101079
+        },
+        {
+            "id": 169743,
+            "wikiDataId": "Q156156",
+            "type": "ADM2",
+            "city": "New Castle County",
+            "name": "New Castle County",
+            "country": "United States of America",
+            "countryCode": "US",
+            "region": "Delaware",
+            "regionCode": "DE",
+            "regionWdId": "Q1393",
+            "latitude": 39.58,
+            "longitude": -75.64,
+            "population": 570719
+        },
+        {
+            "id": 170608,
+            "wikiDataId": "Q508209",
+            "type": "ADM2",
+            "city": "New Hanover County",
+            "name": "New Hanover County",
+            "country": "United States of America",
+            "countryCode": "US",
+            "region": "North Carolina",
+            "regionCode": "NC",
+            "regionWdId": "Q1454",
+            "latitude": 34.18,
+            "longitude": -77.86,
+            "population": 225702
+        },
+        {
+            "id": 119419,
+            "wikiDataId": "Q49145",
+            "type": "CITY",
+            "city": "New Haven",
+            "name": "New Haven",
+            "country": "United States of America",
+            "countryCode": "US",
+            "region": "Connecticut",
+            "regionCode": "CT",
+            "regionWdId": "Q779",
+            "latitude": 41.308333333,
+            "longitude": -72.925,
+            "population": 134023
+        },
+        {
+            "id": 115521,
+            "wikiDataId": "Q34404",
+            "type": "CITY",
+            "city": "New Orleans",
+            "name": "New Orleans",
+            "country": "United States of America",
+            "countryCode": "US",
+            "region": "Louisiana",
+            "regionCode": "LA",
+            "regionWdId": "Q1588",
+            "latitude": 29.976111111,
+            "longitude": -90.078333333,
+            "population": 383997
+        }
+    ],
+    "links": [
+        {
+            "rel": "first",
+            "href": "/v1/geo/cities?offset=0&limit=5&countryIds=US&namePrefix=New&minPopulation=100000"
+        },
+        {
+            "rel": "next",
+            "href": "/v1/geo/cities?offset=5&limit=5&countryIds=US&namePrefix=New&minPopulation=100000"
+        },
+        {
+            "rel": "last",
+            "href": "/v1/geo/cities?offset=10&limit=5&countryIds=US&namePrefix=New&minPopulation=100000"
+        }
+    ],
+    "metadata": {
+        "currentOffset": 0,
+        "totalCount": 12
+    }
+}

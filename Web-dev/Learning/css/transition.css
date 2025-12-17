@@ -1,0 +1,22 @@
+div {
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	margin-top: 200px;
+	text-align: center;
+	transition-property: all;
+	transition-duration: 5s;
+	transition-timing-function: ease-in-out;
+	/* transition-delay: 2s; */
+}
+
+div:hover {
+	margin-left: 1500px;
+	color: wheat;
+	font-size: 0px;
+	background-color: firebrick;
+	border-radius: 50%;
+	rotate: z 90deg;
+	transform: scale(4);
+	/* transform: translateY(-200px); */
+}

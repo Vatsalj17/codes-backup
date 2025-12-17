@@ -1,0 +1,12 @@
+graph {
+    Mike -- Jane;
+    Jane -- Steve;
+    Susan -- Carry;
+    Josey -- John;
+    John -- Mike;
+    John -- Jane;
+    Mahore -- Aditya;
+    Aditya -- Carry;
+    Susan -- Mahore;
+    Mahore -- Steve;
+}
