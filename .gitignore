@@ -20,16 +20,16 @@ yolo*
 vosk-model*
 test
 chadsh
-
 Git/
-FastApi/
-vshell/
-editor/
-Portfolio/
-chat-app/
-monitor/
-gc/
 College/
+
+# Exsisting projects on github to ignore
+Python/FastApi/
+C/Projects/Shell/vshell/
+C/Projects/text-editor/editor/
+C/Projects/chat-app/
+C/Library/monitor/
+C/Memory/gc/
 
 # Ignore temp files
 **.swp
