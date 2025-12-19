@@ -25,6 +25,7 @@ yolo*
 test
 chadsh
 Assembly/
+Git/
 
 # Ignore temp files
 **.swp
