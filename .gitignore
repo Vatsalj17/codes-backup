@@ -23,14 +23,6 @@ chadsh
 Git/
 College/
 
-# Exsisting projects on github to ignore
-Python/FastApi/
-C/Projects/Shell/vshell/
-C/Projects/text-editor/editor/
-C/Projects/chat-app/
-C/Library/monitor/
-C/Memory/gc/
-
 # Ignore temp files
 **.swp
 **.swo

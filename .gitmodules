@@ -1,0 +1,18 @@
+[submodule "Python/FastApi"]
+	path = Python/FastApi
+	url = git@github.com:Vatsalj17/srv-0x4277dc9.git
+[submodule "C/Projects/Shell/vshell"]
+	path = C/Projects/Shell/vshell
+	url = git@github.com:Vatsalj17/vsh.git
+[submodule "C/Projects/text-editor/editor"]
+	path = C/Projects/text-editor/editor
+	url = git@github.com:Vatsalj17/editor.git
+[submodule "C/Projects/chat-app"]
+	path = C/Projects/chat-app
+	url = git@github.com:Vatsalj17/C-Chatroom.git
+[submodule "C/Library/monitor"]
+	path = C/Library/monitor
+	url = git@github.com:Vatsalj17/heap-tracer.git
+[submodule "C/Memory/gc"]
+	path = C/Memory/gc
+	url = git@github.com:Vatsalj17/garbage-collector.git
