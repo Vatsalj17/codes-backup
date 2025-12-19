@@ -6,16 +6,10 @@
 **/node_modules/
 **/__pycache__/
 **/.venv/
-**/vshell/
-**/editor/
-**/Portfolio/
-**/chat-app/
-**/monitor/
-**/gc/
 **/.env
-**/vosk-model*
 **/dist/
 **/.ipynb_checkpoints
+
 Photos/
 Faces/
 stubs/
@@ -23,10 +17,19 @@ room_images/
 Resources/
 robo/
 yolo*
+vosk-model*
 test
 chadsh
+
 Assembly/
 Git/
+FastApi/
+vshell/
+editor/
+Portfolio/
+chat-app/
+monitor/
+gc/
 
 # Ignore temp files
 **.swp
