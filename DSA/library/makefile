@@ -4,10 +4,11 @@ CFLAGS = -Wall -Wextra -Wpedantic -g
 SRC = src
 INC = include
 OBJ = obj
-LIB = lib
+LIBS = lib
+LIB = libds.so
 
 CFLAGS += -I$(INC)
-CFLAGS += -L$(LIB)
+CFLAGS += -L$(LIBS)
 
 SRCS = $(wildcard $(SRC)/*.c)
 OBJS = $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SRCS))
