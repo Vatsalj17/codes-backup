@@ -16,6 +16,8 @@ filename="$1"
 command="$1"
 utildir="utils"
 utilname="mystd"
+stackname="stack.h"
+queuename="queue.h"
 target="solution.out"
 to_run=false
 
@@ -61,9 +63,24 @@ case "$extension" in
 esac
 
 util=""
-if grep "mystd" ${filename} 1>/dev/null; then
+if grep ${utilname} ${filename} 1>/dev/null; then
     echo -e "${CLR_YELLOW}Using utils...${CLR_RESET}"
-	util="${utildir}/${utilname}.${filetype}"
+	util+=" ${utildir}/${utilname}.${filetype}"
+fi
+
+if grep ${queuename} ${filename} 1>/dev/null; then
+    echo -e "${CLR_YELLOW}Using queue...${CLR_RESET}"
+	util+=" library/src/queue.c"
+fi
+
+if grep ${stackname} ${filename} 1>/dev/null; then
+    echo -e "${CLR_YELLOW}Using stack...${CLR_RESET}"
+	util+=" library/src/stack.c"
+fi
+
+if grep "bt.h" ${filename} 1>/dev/null; then
+    echo -e "${CLR_YELLOW}Using binarytree...${CLR_RESET}"
+	util+=" Tree/binarytree.c"
 fi
 
 echo -e "${CLR_YELLOW}Compiling...${CLR_RESET}"

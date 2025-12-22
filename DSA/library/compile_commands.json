@@ -1,0 +1,53 @@
+[
+  {
+    "arguments": [
+      "/usr/sbin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-g",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/Vatsal/Codes/DSA/library",
+    "file": "/home/Vatsal/Codes/DSA/library/src/main.c",
+    "output": "/home/Vatsal/Codes/DSA/library/obj/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/sbin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-g",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/queue.o",
+      "src/queue.c"
+    ],
+    "directory": "/home/Vatsal/Codes/DSA/library",
+    "file": "/home/Vatsal/Codes/DSA/library/src/queue.c",
+    "output": "/home/Vatsal/Codes/DSA/library/obj/queue.o"
+  },
+  {
+    "arguments": [
+      "/usr/sbin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-g",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/stack.o",
+      "src/stack.c"
+    ],
+    "directory": "/home/Vatsal/Codes/DSA/library",
+    "file": "/home/Vatsal/Codes/DSA/library/src/stack.c",
+    "output": "/home/Vatsal/Codes/DSA/library/obj/stack.o"
+  }
+]

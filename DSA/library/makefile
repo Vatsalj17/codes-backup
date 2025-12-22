@@ -6,6 +6,7 @@ INC = include
 OBJ = obj
 LIBS = lib
 LIB = libds.so
+BIN = a.out
 
 CFLAGS += -I$(INC)
 CFLAGS += -L$(LIBS)

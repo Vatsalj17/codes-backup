@@ -8,6 +8,7 @@
 **/.env
 **/dist
 **/.ipynb_checkpoints
+**/.cache
 
 Photos/
 Faces/
@@ -33,6 +34,7 @@ College/
 **.npy
 **.pt
 **.pd
+**.idx
 **.txt
 **.csv
 **.so
@@ -62,3 +64,4 @@ College/
 **.dep
 **.pdf
 *.old
+vgcore*
