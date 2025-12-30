@@ -3,3 +3,4 @@
 
 void getArr(int** arr, int* n);
 void putArr(const int* arr, int n);
+void swap(int *a, int *b);

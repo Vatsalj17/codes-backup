@@ -1,7 +1,6 @@
-#include "../utils/mystd.hpp"
+#include "../utils/mystd.h"
 
-void rotate(vector<int> &arr) {
-    int n = arr.size();
+void rotate(int* arr, int n) {
     if (n <= 1) return;
     int temp = arr[n - 1];
     for (int i = n - 1; i > 0; i--) {
@@ -11,8 +10,8 @@ void rotate(vector<int> &arr) {
 }
 
 int main(void) {
-    vector<int> arr;
-    getVec(arr);
-    rotate(arr);
-    putVec(arr);
+    int* arr, n;
+    getArr(&arr, &n);
+    rotate(arr, n);
+    putArr(arr, n);
 }

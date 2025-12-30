@@ -1,9 +1,9 @@
-#include "../utils/mystd.hpp"
+#include "../utils/mystd.h"
 
 int main(void) {
-	vector<int> nums;
-	getVec(nums);
-	int count = 0, n = nums.size();
+	int* nums, n;
+	getArr(&nums, &n);
+	int count = 0;
 	// for (int i = 0; i < n; i++) {
 	// 	if (nums[i] == 0) swap(nums[i], nums[count++]);
 	// }
@@ -14,11 +14,11 @@ int main(void) {
     while (idx < p3) {
         if (nums[idx] == 0) {
             p2++;
-            swap(nums[idx++], nums[p2]);
+            swap(&nums[idx++], &nums[p2]);
         } else if (nums[idx] == 2) {
             p3--;
-            swap(nums[idx], nums[p3]);
+            swap(&nums[idx], &nums[p3]);
         } else idx++;
     }
-    putVec(nums);
+    putArr(nums, n);
 }

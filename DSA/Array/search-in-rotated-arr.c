@@ -1,7 +1,6 @@
-#include "../utils/mystd.hpp"
+#include "../utils/mystd.h"
 
-int rsearch(vector<int>& nums, int target) {
-    int n = nums.size();
+int rsearch(int* nums, int n, int target) {
 	int beg = 0, end = n - 1;
 	while (end > beg) {
 		int mid = (beg + end) / 2;
@@ -30,7 +29,7 @@ int rsearch(vector<int>& nums, int target) {
 	return -1;
 }
 
-int binary_search(vector<int>& arr, int n, int k) {
+int binary_search(int* arr, int n, int k) {
 	int beg = 0, end = n - 1;
 	while (end >= beg) {
 		int mid = (beg + end) / 2;
@@ -46,10 +45,10 @@ int binary_search(vector<int>& arr, int n, int k) {
 
 int main(void) {
 	int k;
-	vector<int> arr;
-	getVec(arr);
-	cout << "Enter searching element: ";
-	cin >> k;
-	int idx = rsearch(arr, k);
-	cout << "Found at " << idx << endl;
+	int* arr, n;
+	getArr(&arr, &n);
+	printf("Enter searching element: ");
+    scanf("%d", &k);
+	int idx = rsearch(arr, n, k);
+	printf("Found at %d\n", idx);
 }

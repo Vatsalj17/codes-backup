@@ -1,8 +1,8 @@
-#include "../utils/mystd.hpp"
+#include "../utils/mystd.h"
 #include <stdbool.h>
 
-bool checkSorted(vector<int> &nums) {
-    int n = nums.size();
+bool checkSorted(int* nums, int numsSize) {
+    int n = numsSize;
     int check = 0;
     for (int i = 0; i < n - 1; i++) {
         if (nums[i] > nums[i + 1]) check++;
@@ -15,7 +15,7 @@ bool checkSorted(vector<int> &nums) {
 }
 
 int main(void) {
-    vector<int> nums;
-    getVec(nums);
-    cout << "Ans: " << checkSorted(nums) << endl;
+    int* nums, n;
+    getArr(&nums, &n);
+    printf("Ans: %d\n", checkSorted(nums, n));
 }
