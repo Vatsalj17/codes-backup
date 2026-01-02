@@ -1,5 +1,4 @@
 #include <stdlib.h>
-// #include "bt.h"
 
 struct TreeNode {
 	int val;

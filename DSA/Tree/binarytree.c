@@ -3,12 +3,12 @@
 #include <stdbool.h>
 #include "bt.h"
 
-treenode* tree_node_init(int value) {
+treenode* tree_node_init(int val) {
     treenode* new = malloc(sizeof(treenode));
     if (new == NULL) return NULL;
     new->left = NULL;
     new->right = NULL;
-    new->value = value;
+    new->val = val;
     return new;
 }
 
@@ -57,7 +57,7 @@ void printtree_rec(treenode* root, int level) {
         return;
     }
     printtabs(level);
-    printf("value = %d\n", root->value);
+    printf("val = %d\n", root->val);
     printtabs(level);
 
     printf("left -> \n");
@@ -75,12 +75,10 @@ void printtree(treenode* root) {
     printtree_rec(root, 0);
 }
 
-void destroytree(treenode* root) {
-    if (root == NULL) {
-        return;
-    }
-    destroytree(root->left);
-    destroytree(root->right);
+void destroy_tree(treenode* root) {
+    if (root == NULL) return;
+    destroy_tree(root->left);
+    destroy_tree(root->right);
     free(root);
 }
 

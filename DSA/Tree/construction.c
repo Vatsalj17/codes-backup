@@ -6,7 +6,7 @@ typedef treenode* (*construct) (int*, int, int, int*, int, int, map_t*);
 treenode* from_inorder_preorder(int* preorder, int preStart, int preEnd, int* inorder, int inStart, int inEnd, map_t* inMap) {
 	if (preStart > preEnd || inStart > inEnd) return NULL;
 	treenode* root = tree_node_init(preorder[preStart]);
-	int inRoot = map_lookup(inMap, root->value);
+	int inRoot = map_lookup(inMap, root->val);
 	int nums_left = inRoot - inStart;
 	root->left = from_inorder_preorder(preorder, preStart + 1, preStart + nums_left, inorder, inStart, inRoot - 1, inMap);
 	root->right = from_inorder_preorder(preorder, preStart + nums_left + 1, preEnd, inorder, inRoot + 1, inEnd, inMap);
@@ -16,7 +16,7 @@ treenode* from_inorder_preorder(int* preorder, int preStart, int preEnd, int* in
 treenode* from_inorder_postorder(int* postorder, int postStart, int postEnd, int* inorder, int inStart, int inEnd, map_t* inMap) {
 	if (postStart > postEnd || inStart > inEnd) return NULL;
 	treenode* root = tree_node_init(postorder[postEnd]);
-	int inRoot = map_lookup(inMap, root->value);
+	int inRoot = map_lookup(inMap, root->val);
 	int nums_left = inRoot - inStart;
 	root->left = from_inorder_postorder(postorder, postStart, postStart + nums_left - 1, inorder, inStart, inRoot - 1, inMap);
 	root->right = from_inorder_postorder(postorder, postStart + nums_left, postEnd - 1, inorder, inRoot + 1, inEnd, inMap);
@@ -43,6 +43,6 @@ int main(void) {
 	treenode* root2 = buildTree(inorder, sizeof(inorder) / sizeof(inorder[0]), preorder, sizeof(preorder) / sizeof(preorder[0]), from_inorder_preorder);
 	printtree(root);
 	printtree(root2);
-	destroytree(root);
-	destroytree(root2);
+	destroy_tree(root);
+	destroy_tree(root2);
 }

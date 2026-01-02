@@ -11,7 +11,7 @@ void preorder(treenode* root, int* pre, int* i) {
 	if (root == NULL) {
 		return;
 	}
-	pre[(*i)++] = root->value;
+	pre[(*i)++] = root->val;
 	preorder(root->left, pre, i);
 	preorder(root->right, pre, i);
 }
@@ -22,7 +22,7 @@ void postorder(treenode* root, int* post, int* i) {
 	}
 	postorder(root->left, post, i);
 	postorder(root->right, post, i);
-	post[(*i)++] = root->value;
+	post[(*i)++] = root->val;
 }
 
 void inorder(treenode* root, int* in, int* i) {
@@ -30,7 +30,7 @@ void inorder(treenode* root, int* in, int* i) {
 		return;
 	}
 	inorder(root->left, in, i);
-	in[(*i)++] = root->value;
+	in[(*i)++] = root->val;
 	inorder(root->right, in, i);
 }
 
@@ -43,7 +43,7 @@ void preorder_itr(treenode* root, int* pre, int* i) {
 	while (!stack_empty(s)) {
 		root = *(treenode**)stack_top(s);
 		pop(s);
-		pre[(*i)++] = root->value;
+		pre[(*i)++] = root->val;
 		if (root->right != NULL) push(s, &root->right);
 		if (root->left != NULL) push(s, &root->left);
 	}
@@ -64,7 +64,7 @@ void inorder_itr(treenode* root, int* in, int* i) {
 			if (stack_empty(s)) break;
 			node = *(treenode**)stack_top(s);
 			pop(s);
-			in[(*i)++] = node->value;
+			in[(*i)++] = node->val;
 			node = node->right;
 		}
 	}
@@ -111,7 +111,7 @@ int** bfs(treenode* root, int* return_size, int** returnCols_size) {
 			if (current->right != NULL) {
 				enqueue(q, &current->right);
 			}
-			result[lvl][i] = current->value;
+			result[lvl][i] = current->val;
 		}
 		lvl++;
 	}
@@ -174,5 +174,5 @@ int main(void) {
 	for (int i = 0; i < rows; i++) free(sol[i]);
 	free(sol);
 
-	destroytree(n1);
+	destroy_tree(n1);
 }
