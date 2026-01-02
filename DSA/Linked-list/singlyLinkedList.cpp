@@ -11,14 +11,14 @@ class Node {
 		this->next = NULL;
 	}
 
-    ~Node() {
-        int value = this->data;
-        if (this->next != NULL) {
-            delete next;
-            this->next = NULL;
-        }
-        cout << "Memory is free for node with data " << value << endl;
-    }
+	~Node() {
+		int value = this->data;
+		if (this->next != NULL) {
+			delete next;
+			this->next = NULL;
+		}
+		cout << "Memory is free for node with data " << value << endl;
+	}
 };
 
 void insertNodeAtHead(Node*& head, int data) {
@@ -34,18 +34,18 @@ void insertNodeAtTail(Node*& tail, int data) {
 }
 
 void insertAtPosition(Node*& head, Node*& tail, int pos, int data) {
-    if (pos == 1) {
-        insertNodeAtHead(head, data);
-        return;
-    }
+	if (pos == 1) {
+		insertNodeAtHead(head, data);
+		return;
+	}
 	Node* temp = head;
 	for (int i = 1; i < pos - 1; i++) {
 		temp = temp->next;
 	}
-    if (temp->next == NULL) {
-        insertNodeAtTail(tail, data);
-        return;
-    }
+	if (temp->next == NULL) {
+		insertNodeAtTail(tail, data);
+		return;
+	}
 	Node* nodeToInsert = new Node(data);
 	nodeToInsert->next = temp->next;
 	temp->next = nodeToInsert;
@@ -53,57 +53,57 @@ void insertAtPosition(Node*& head, Node*& tail, int pos, int data) {
 
 void deleteNodeByPosition(Node*& head, int pos) {
 	if (pos == 1) {
-        Node* temp = head;
-        head = head->next;
-        temp->next = NULL;
-        delete temp;
+		Node* temp = head;
+		head = head->next;
+		temp->next = NULL;
+		delete temp;
 	} else {
-        Node* curr = head;
-        Node* prev = NULL;
-        for (int i = 1; i < pos; i++) {
-            prev = curr;
-            curr = curr->next;
-        }
-        prev->next = curr->next;
-        curr->next = NULL;
-        delete curr;
+		Node* curr = head;
+		Node* prev = NULL;
+		for (int i = 1; i < pos; i++) {
+			prev = curr;
+			curr = curr->next;
+		}
+		prev->next = curr->next;
+		curr->next = NULL;
+		delete curr;
 	}
 }
 
 void deleteNode(Node*& head, Node* nodeToDelete) {
-    if (head == nodeToDelete) {
-        head = nodeToDelete->next;
-        nodeToDelete->next = NULL;
-        delete nodeToDelete;
-        return;
-    } else {
-        Node* temp = head;
-        while(temp != NULL && temp->next != nodeToDelete) {
-            temp = temp->next;
-        }
-        if (temp == NULL) return;
-        temp->next = nodeToDelete->next;
-        nodeToDelete->next = NULL;
-        delete nodeToDelete;
-    }
+	if (head == nodeToDelete) {
+		head = nodeToDelete->next;
+		nodeToDelete->next = NULL;
+		delete nodeToDelete;
+		return;
+	} else {
+		Node* temp = head;
+		while (temp != NULL && temp->next != nodeToDelete) {
+			temp = temp->next;
+		}
+		if (temp == NULL) return;
+		temp->next = nodeToDelete->next;
+		nodeToDelete->next = NULL;
+		delete nodeToDelete;
+	}
 }
 
 int length(Node*& head) {
-    int count = 0;
-    Node* temp = head;
-    while(temp != NULL) {
-        temp = temp->next;
-        count++;
-    }
-    return count;
+	int count = 0;
+	Node* temp = head;
+	while (temp != NULL) {
+		temp = temp->next;
+		count++;
+	}
+	return count;
 }
 
 Node* findFirstOccurance(Node*& head, int val) {
-    Node* temp = head;
-    while(temp->data != val) {
-        temp = temp->next;
-    }
-    return temp;
+	Node* temp = head;
+	while (temp->data != val) {
+		temp = temp->next;
+	}
+	return temp;
 }
 
 void printList(Node* head) {
@@ -125,6 +125,6 @@ int main(void) {
 	insertNodeAtTail(tail, 8);
 	insertAtPosition(head, tail, 2, 78);
 	deleteNodeByPosition(head, 1);
-    deleteNode(head, findFirstOccurance(head, 10));
+	deleteNode(head, findFirstOccurance(head, 10));
 	printList(head);
 }

@@ -16,10 +16,9 @@ filename="$1"
 command="$1"
 utildir="utils"
 utilname="mystd"
-stackname="stack.h"
-queuename="queue.h"
 target="solution.out"
 to_run=false
+flags="-g -Wall -Wextra"
 
 case "$command" in
 clean)
@@ -68,14 +67,14 @@ if grep ${utilname} ${filename} 1>/dev/null; then
 	util+=" ${utildir}/${utilname}.${filetype}"
 fi
 
-if grep ${queuename} ${filename} 1>/dev/null; then
+if grep "queue.h" ${filename} 1>/dev/null; then
     echo -e "${CLR_YELLOW}Using queue...${CLR_RESET}"
-	util+=" library/src/queue.c"
+	util+=" generics/queue.c"
 fi
 
-if grep ${stackname} ${filename} 1>/dev/null; then
+if grep "stack.h" ${filename} 1>/dev/null; then
     echo -e "${CLR_YELLOW}Using stack...${CLR_RESET}"
-	util+=" library/src/stack.c"
+	util+=" generics/stack.c"
 fi
 
 if grep "bt.h" ${filename} 1>/dev/null; then
@@ -83,9 +82,14 @@ if grep "bt.h" ${filename} 1>/dev/null; then
 	util+=" Tree/binarytree.c"
 fi
 
+if grep "hash_map.h" ${filename} 1>/dev/null; then
+    echo -e "${CLR_YELLOW}Using hashmap...${CLR_RESET}"
+	util+=" Hash/hash_map.c"
+fi
+
 echo -e "${CLR_YELLOW}Compiling...${CLR_RESET}"
 
-if ${compiler} -o ${target} ${filename} ${util} -g; then
+if ${compiler} -o ${target} ${filename} ${util} ${flags}; then
 	echo -e "${CLR_GREEN}Compiled: ${target}${CLR_RESET}"
 	if $to_run; then
 		echo -e "${CLR_YELLOW}Running the program...${CLR_RESET}"

@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+
 int* decimalRepresentation(int n, int* returnSize) {
     int *ans = malloc(sizeof(int));
     int i = 1;
