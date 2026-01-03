@@ -16,3 +16,9 @@
 [submodule "C/Memory/gc"]
 	path = C/Memory/gc
 	url = git@github.com:Vatsalj17/garbage-collector.git
+[submodule "DevOps/Git/megacorp"]
+    path = DevOps/Git/megacorp
+    url = git@github.com:Vatsalj17/megacorp.git
+[submodule "DevOps/Git/webflyx"]
+    path = DevOps/Git/webflyx
+    url = git@github.com:Vatsalj17/webflyx.git
